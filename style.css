@@ -21,11 +21,6 @@ body {
     background-color: var(--body-background);
 }
 
-body > section:nth-child(n+4) {
-    height: 1000px;
-    width: 100%;
-}
-
 #header {
     background: linear-gradient(0deg, rgba(14,14,14,1) 5%, rgba(14,14,14,0) 15%), url(./assets/background.png) no-repeat fixed center center;
     background-size: cover;
@@ -288,6 +283,170 @@ nav {
     font-weight: 400;
 }
 
+.artists-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5%;
+}
+
+.mini-card-artist {
+    background-color: var(--card-color);
+    display: flex;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 40px;
+    margin: 40px 10px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    flex: 0 1 400px;
+}
+
+.mini-card-artist > div > p:nth-child(2) {
+    color: var(--color-logo);
+}
+
+.mini-card-artist > div > p {
+    padding: 10px 0;
+}
+
+.more-artists {
+    display: flex;
+    justify-content: center;
+}
+
+.more-artists a {
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    width: 22%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer {
+    background-color: var(--card-color);
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.footer-top {
+    border-bottom: 1px solid var(--subtitle-color);
+    display: flex;
+    padding: 3%;
+    justify-content: space-between;
+}
+
+.footer-top > img {
+    width: fit-content;
+}
+.goUp {
+    background-color: var(--color-logo);
+    padding: 25px;
+}
+
+.footer-middle {
+    display: flex;
+}
+
+.newsletter {
+    flex: 2;
+    border-right: 1px solid var(--subtitle-color);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+    height: auto;
+}
+
+.all-news {
+    color: var(--color-logo);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.all-news::first-line {
+    color: var(--text-color);
+}
+
+.news-form {
+    display: flex;
+}
+
+.news-form > input {
+    border: 1px solid transparent;
+    background-color: var(--color-input);
+    color: var(--subtitle-color);
+    padding: 15px;
+    font-size: 1.4em;
+    width: 300px;
+}
+
+.news-form > input:focus-within {
+    border: 1px solid var(--color-logo);
+    border-right: 0;
+    outline: none;
+}
+
+.news-form > button {
+    border: none;
+    background-color: var(--text-color);
+    color: var(--color-input);
+    padding: 15px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.site-map {
+    flex: 4;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px 0;
+}
+
+.site-map > div > ul > li {
+    font-size: 1.4em;
+    color: var(--subtitle-color);
+    list-style: none;
+    margin-top: 25px;
+}
+
+.site-map > div > ul > li:first-of-type {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.site-map > div > ul > li:last-of-type {
+    margin-bottom: 25px;
+}
+
+.footer-base {
+    display: flex;
+    padding: 3%;
+    justify-content: space-between;
+    border-top: 1px solid var(--subtitle-color);
+}
+
+.footer-base a {
+    color: var(--subtitle-color);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.social-links {
+    display: flex;
+    gap: 50px;
+}
+
 
 
 
@@ -310,7 +469,8 @@ nav {
     #main {
         flex-direction: column;
     }
-    .main-side-info {
+    .main-sid
+    e-info {
         flex-direction: row;
         padding: 25px 5px;
     }
@@ -332,5 +492,8 @@ nav {
     }
     .popular-half > div > img {
         width: 100%;
+    }
+    .mini-card-artist {
+        min-width: 320px;
     }
 }
