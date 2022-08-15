@@ -15,12 +15,22 @@
                 <img src="./assets/logo.svg" alt="">
             </div>
             <div id="navbar">
-                <span>Comprar NFT</span>
-                <span>Sobre</span>
-                <span>FAQ</span>
+                <div class="burger-button" id="burger-button">
+                    <div class="bb1"></div>
+                    <div class="bb2"></div>
+                    <div class="bb3"></div>
+                </div>
+                <ul id="navlinks">
+                    <li>Comprar NFT</li>
+                    <li>Sobre</li>
+                    <li>FAQ</li>
+                </ul>
             </div>
             <div>
-                <button><img src="./assets/logo_MetaMask.svg">Conectar carteira</button>
+                <button class="connect-button">
+                    <img src="./assets/logo_MetaMask.svg">
+                    <span>Conectar carteira</span>
+                </button>
             </div>
         </nav>
         <div id="main-header">
@@ -69,11 +79,11 @@
         <div class="main-main">
             <div class="main-info">
                 <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse erat nulla, facilisis et mollis pellentesque, ornare ut felis. Cras porta felis eget metus consectetur ultrices. In nulla quam, condimentum quis tincidunt id, fringilla id diam. Nam vel arcu luctus, placerat lacus sed, ornare turpis. In at dui accumsan, ultricies ipsum non, tristique nisi.</p><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse erat nulla, facilisis et mollis pellentesque, ornare ut felis. Cras porta felis eget metus consectetur ultrices. In nulla quam, condimentum quis tincidunt id, fringilla id diam. <span class="text-highlight">Nam vel arcu luctus</span>, placerat lacus sed, ornare turpis. In at dui accumsan, ultricies ipsum non, tristique nisi.</p><br>
                     <p><a href="#">Lorem Ipsum</a></p>
                 </div>
                 <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse erat nulla, facilisis et mollis pellentesque, ornare ut felis. Cras porta felis eget metus consectetur ultrices. In nulla quam, condimentum quis tincidunt id, fringilla id diam. Nam vel arcu luctus, placerat lacus sed, ornare turpis. In at dui accumsan, ultricies ipsum non, tristique nisi.</p><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse erat nulla, facilisis et mollis pellentesque, ornare ut felis. Cras porta felis eget metus consectetur ultrices. In nulla quam, condimentum quis tincidunt id, fringilla id diam. <span class="text-highlight">Nam vel arcu luctus</span>, placerat lacus sed, ornare turpis. In at dui accumsan, ultricies ipsum non, tristique nisi.</p><br>
                     <p><a href="#">Lorem Ipsum</a></p>
                 </div>
             </div>
@@ -116,42 +126,42 @@
                 <img src="./assets/artista-1.png" alt="">
                 <div>
                     <p>Nome Sobrenome</p>
-                    <p>x Fotografias</p>
+                    <p>80 Fotografias</p>
                 </div>
             </div>
             <div class="mini-card-artist">
                 <img src="./assets/artista-2.png" alt="">
                 <div>
                     <p>Nome Sobrenome</p>
-                    <p>x Fotografias</p>
+                    <p>99 Fotografias</p>
                 </div>
             </div>
             <div class="mini-card-artist">
                 <img src="./assets/artista-3.png" alt="">
                 <div>
                     <p>Nome Sobrenome</p>
-                    <p>x Fotografias</p>
+                    <p>50 Fotografias</p>
                 </div>
             </div>
             <div class="mini-card-artist">
                 <img src="./assets/artista-4.png" alt="">
                 <div>
                     <p>Nome Sobrenome</p>
-                    <p>x Fotografias</p>
+                    <p>43 Fotografias</p>
                 </div>
             </div>
             <div class="mini-card-artist">
                 <img src="./assets/artista-5.png" alt="">
                 <div>
                     <p>Nome Sobrenome</p>
-                    <p>x Fotografias</p>
+                    <p>28 Fotografias</p>
                 </div>
             </div>
             <div class="mini-card-artist">
                 <img src="./assets/artista-6.png" alt="">
                 <div>
                     <p>Nome Sobrenome</p>
-                    <p>x Fotografias</p>
+                    <p>20 Fotografias</p>
                 </div>
             </div>
         </div>
@@ -160,7 +170,7 @@
     <section id="footer">
         <div class="footer-top">
             <img src="./assets/logo.svg" alt="">
-            <div class="goUp"><img src="./assets/arrow-black.svg" alt=""></div>
+            <div class="goUp" onclick="document.querySelector('#header').scrollIntoView({behavior:'smooth'});"><img src="./assets/arrow-black.svg" alt=""></div>
         </div>
         <div class="footer-middle">
             <div class="newsletter">
@@ -173,28 +183,28 @@
                 <div>
                     <ul>
                         <li>Empresa</li>
-                        <li>Sobre</li>
-                        <li>Serviços</li>
-                        <li>Time</li>
-                        <li>Carreira</li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Time</a></li>
+                        <li><a href="#">Carreira</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul>
                         <li>Mapa</li>
-                        <li>Galeria</li>
-                        <li>Populares</li>
-                        <li>Vendas</li>
-                        <li>Contato</li>
+                        <li><a href="#">Galeria</a></li>
+                        <li><a href="#">Populares</a></li>
+                        <li><a href="#">Vendas</a></li>
+                        <li><a href="#">Contato</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul>
                         <li>Links</li>
-                        <li>FAQs</li>
-                        <li>Termos</li>
-                        <li>Política</li>
-                        <li>Ajuda</li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Termos</a></li>
+                        <li><a href="#">Política</a></li>
+                        <li><a href="#">Ajuda</a></li>
                     </ul>
                 </div>
             </div>

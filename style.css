@@ -44,9 +44,35 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 25%;
     gap: 25px;
     color: var(--text-color);
+}
+
+#navbar > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#navbar > ul > li {
+    
+}
+
+.connect-button {
+    background-color: var(--text-color);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid transparent;
+    padding: 0 10px;
+}
+
+.connect-button > span {
+    font-weight: 700;
+    font-size: .9em;
 }
 
 #main-header {
@@ -79,11 +105,42 @@ nav {
 .profile-pics > img {
     width: 80%;
     height: fit-content;
+    position: relative;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
+    transition: top .2s, left .2s, box-shadow .2s;
+    border-radius: 50%;
+}
+
+.profile-pics > img:nth-of-type(1) {
+    z-index: 1;
+}
+.profile-pics > img:nth-of-type(2) {
+    z-index: 2;
+}
+.profile-pics > img:nth-of-type(3) {
+    z-index: 3;
+}
+.profile-pics > img:nth-of-type(4) {
+    z-index: 4;
 }
 
 .profile-pics > img:not(:first-child) {
     margin-left: -3.5em;
 }
+
+.profile-pics > img:hover {
+    left: -12px;
+    top: -12px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.2) contrast(1.05);
+    transition: top .2s, left .2s, box-shadow .2s;
+}
+
+
+
+
 
 .mais-artistas{
     display: flex;
@@ -213,6 +270,14 @@ nav {
     margin-bottom: 25px;
 }
 
+.text-highlight {
+    color: var(--color-logo);
+}
+
+.main-info > div > p > a {
+    color: var(--text-color)
+}
+
 .main-image {
     background-color: rgba(0, 2, 128, 0.267);
     background: url(./assets/banner.png) no-repeat center center;
@@ -304,6 +369,17 @@ nav {
     flex: 0 1 400px;
 }
 
+.mini-card-artist:hover {
+    background-color: var(--color-logo);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.mini-card-artist:hover > div > p:nth-child(2) {
+    color: var(--text-color)
+}
+
 .mini-card-artist > div > p:nth-child(2) {
     color: var(--color-logo);
 }
@@ -326,6 +402,7 @@ nav {
     width: 22%;
     justify-content: space-between;
     align-items: center;
+    margin-top: 25px;
 }
 
 #footer {
@@ -348,6 +425,16 @@ nav {
 .goUp {
     background-color: var(--color-logo);
     padding: 25px;
+    cursor: pointer;
+}
+
+.goUp > img {
+    transition: filter .2s;
+}
+
+.goUp:hover > img {
+    filter: invert(100%);
+    transition: filter .2s;
 }
 
 .footer-middle {
@@ -370,6 +457,7 @@ nav {
     color: var(--color-logo);
     font-size: 2em;
     font-weight: 500;
+
 }
 
 .all-news::first-line {
@@ -378,6 +466,8 @@ nav {
 
 .news-form {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .news-form > input {
@@ -386,13 +476,17 @@ nav {
     color: var(--subtitle-color);
     padding: 15px;
     font-size: 1.4em;
-    width: 300px;
+    min-width: 215px;
+    width: 65%;
+    height: 58px;
+    transition: border .2s;
 }
 
 .news-form > input:focus-within {
     border: 1px solid var(--color-logo);
-    border-right: 0;
+    border-right: 1px solid transparent;
     outline: none;
+    transition: border .2s;
 }
 
 .news-form > button {
@@ -402,6 +496,13 @@ nav {
     padding: 15px;
     font-size: 1.4em;
     font-weight: 700;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.news-form > button:hover {
+    color: var(--color-logo);
+    transition: color .2s;
 }
 
 .site-map {
@@ -418,6 +519,7 @@ nav {
     color: var(--subtitle-color);
     list-style: none;
     margin-top: 25px;
+    transition: color .2s;
 }
 
 .site-map > div > ul > li:first-of-type {
@@ -427,6 +529,17 @@ nav {
 
 .site-map > div > ul > li:last-of-type {
     margin-bottom: 25px;
+}
+
+.site-map > div > ul > li > a {
+    color: var(--subtitle-color);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.site-map > div > ul > li > a:hover {
+    color: var(--color-logo);
+    transition: color .2s;
 }
 
 .footer-base {
@@ -440,6 +553,12 @@ nav {
     color: var(--subtitle-color);
     text-decoration: none;
     font-size: 1.5em;
+    transition: color .2s;
+}
+
+.footer-base a:hover {
+    color: var(--text-color);
+    transition: color .2s;
 }
 
 .social-links {
@@ -447,6 +566,14 @@ nav {
     gap: 50px;
 }
 
+.social-links > a > img {
+    transition: filter .2s;
+}
+
+.social-links > a:hover > img {
+    filter: brightness(0) saturate(100%) invert(100%);
+    transition: filter .2s;
+}
 
 
 
@@ -454,9 +581,108 @@ nav {
 
 
 @media only screen and (max-width: 768px) {
+    nav > div:first-of-type > img {
+        width: 80%;
+    }
+    #navlinks {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -3000px;
+        background-color: var(--black-text);
+        width: 40%;
+        height: 100vh;
+        z-index: 6;
+        align-items: flex-start;
+        justify-content: start;
+        padding-top: 90px;
+        gap: 0;
+    }
+    .show #navlinks {
+        left: 0;
+    }
+    #navlinks > li {
+        padding: 10% 0 10% 25%;
+        font-size: 1.25em;
+        border-bottom: 1px solid var(--subtitle-color);
+        width: 100%;
+        justify-content: start;
+        align-items: center;
+        display: flex;
+        border-left: 8px solid transparent;
+        transition: border .25s;
+    }
+    #navlinks > li:first-of-type {
+        border-top: 1px solid var(--subtitle-color);
+    }
+    #navlinks > li:hover {
+        border-left: 8px solid var(--color-logo);
+        transition: border .25s;
+        font-weight: 700;
+    }
+    .burger-button {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        z-index: 7;
+        position: relative;
+    }
+    .burger-button > div {
+        height: 3px;
+        width: 25px;
+        background-color: var(--text-color);
+        transition: all 0.4s;
+    }
+    .change .bb1 {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .change .bb2 {
+        opacity: 0;
+    } 
+    .change .bb3 {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }    
     .popular-frames > div:first-child {
         border-right: unset;
-      }
+    }
+    .footer-middle {
+        flex-direction: column;
+    }
+    .news-form {
+        max-width: 480px;
+        width: 100%;
+        margin: 15px;
+    }
+    .news-form > input {
+        font-size: 1em;
+    }
+    .newsletter {
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid var(--subtitle-color);
+        margin-top: 25px;
+        padding-bottom: 25px;
+    }
+    .all-news {
+        text-align: center;
+    }
+    .site-map > div > ul > li {
+        font-size: 1em;
+    }
+    .footer-top > img {
+        width: 70%;
+        max-width: 258px;
+    }
+    .footer-base {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .social-links {
+        width: 100%;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -466,6 +692,15 @@ nav {
     .badge > img {
         max-width: 150px;
     }
+    .connect-button > span {
+        font-size: .75em;
+    }
+    #navbar > ul {
+        width: 60%;
+    }
+    #navbar > ul > li {
+        padding: 10% 0 10% 15%;
+    }
     #main {
         flex-direction: column;
     }
@@ -473,6 +708,10 @@ nav {
     e-info {
         flex-direction: row;
         padding: 25px 5px;
+    }
+    .main-side-info {
+        margin-top: 15px;
+        border: 1px solid transparent;
     }
     .main-side-info > div > p:first-child {
         font-size: 2em;
@@ -494,6 +733,11 @@ nav {
         width: 100%;
     }
     .mini-card-artist {
-        min-width: 320px;
+        min-width: 300px;
+        margin: 5px 10px;
+    }
+    .more-artists a {
+        font-size: 1em;
+        width: 60%;
     }
 }
