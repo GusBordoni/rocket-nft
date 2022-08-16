@@ -51,12 +51,11 @@ nav {
 #navbar > ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
     gap: 25px;
 }
 
-#navbar > ul > li {
-    
+.burger-button {
+    display: none;
 }
 
 .connect-button {
@@ -68,6 +67,12 @@ nav {
     gap: 5px;
     border: 1px solid transparent;
     padding: 0 10px;
+    cursor: pointer;
+}
+
+.connect-button:hover {
+    background-color: var(--color-logo);
+    color: var(--text-color);
 }
 
 .connect-button > span {
@@ -582,7 +587,10 @@ nav {
 
 @media only screen and (max-width: 768px) {
     nav > div:first-of-type > img {
-        width: 80%;
+        width: 75%;
+    }
+    #navbar > ul {
+        gap: 0;
     }
     #navlinks {
         flex-direction: column;
@@ -597,9 +605,28 @@ nav {
         justify-content: start;
         padding-top: 90px;
         gap: 0;
+        transition: left .3s;
     }
-    .show #navlinks {
+    #navlinks.show {
         left: 0;
+        box-shadow: 10px 0 25px black;
+        transition: left .3s;
+    }
+    .black-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .6s, visibility .7s;
+    }
+    #black-overlay.curtain {
+        visibility: visible;
+        opacity: 0.5;
+        transition: opacity .3s, visibility .2s;
     }
     #navlinks > li {
         padding: 10% 0 10% 25%;
@@ -620,12 +647,15 @@ nav {
         transition: border .25s;
         font-weight: 700;
     }
+
+
     .burger-button {
         display: flex;
         flex-direction: column;
         gap: 5px;
         z-index: 7;
-        position: relative;
+        position: absolute;
+        left: 50%;
     }
     .burger-button > div {
         height: 3px;
