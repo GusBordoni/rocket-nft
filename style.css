@@ -17,9 +17,15 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
 body {
     background-color: var(--body-background);
 }
+
+
 
 #header {
     background: linear-gradient(0deg, rgba(14,14,14,1) 5%, rgba(14,14,14,0) 15%), url(./assets/background.png) no-repeat fixed center center;
@@ -372,6 +378,7 @@ nav {
     align-items: center;
     gap: 25px;
     flex: 0 1 400px;
+    transition: background-color .3s;
 }
 
 .mini-card-artist:hover {
