@@ -8,8 +8,8 @@ burgerBtn.addEventListener('click', () => {
     blackOver.classList.toggle('curtain')
 })
 
-ScrollReveal({origin: 'right'}).reveal('#header', { distance: '50px', delay: 500 })
+ScrollReveal({origin: 'right'}).reveal('#header', { delay: 500 })
+ScrollReveal().reveal('.galleryIMG', {delay: 800,  interval: 100})
 ScrollReveal({origin: 'right'}).reveal('#main', { distance: '50px', delay: 500 })
-ScrollReveal({origin: 'right'}).reveal('#popular', { distance: '50px', delay: 500 })
-ScrollReveal({origin: 'right'}).reveal('#best-artists', { distance: '50px', delay: 500 })
-ScrollReveal({origin: 'right'}).reveal('#footer', { distance: '50px', delay: 500 })
+ScrollReveal({origin: 'right'}).reveal('.reveal-popular', { distance: '50px', delay: 500, interval: 100 })
+ScrollReveal({origin: 'right'}).reveal('.mini-card-artist', { distance: '50px', delay: 500, interval: 100 })

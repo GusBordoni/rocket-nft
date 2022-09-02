@@ -60,6 +60,29 @@ nav {
     gap: 25px;
 }
 
+#navlinks > li {
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+#navlinks > li::after {
+    display: block;
+    content: '';
+    border-bottom: 2px solid var(--color-logo);
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+    transform-origin:  0% 50%;
+    height: 2px;
+}
+
+#navlinks > li:hover::after {
+    transform: scaleX(1);
+    transform-origin:  0% 50%;
+}
+
+
+
+
 .burger-button {
     display: none;
 }
@@ -74,11 +97,13 @@ nav {
     border: 1px solid transparent;
     padding: 0 10px;
     cursor: pointer;
+    transition: background-color .2s, color .2s;
 }
 
 .connect-button:hover {
     background-color: var(--color-logo);
     color: var(--text-color);
+    transition: all .2s;
 }
 
 .connect-button > span {
@@ -203,7 +228,8 @@ nav {
     gap: 2.5%;
     height: max-content;
     justify-content: space-evenly;
-    overflow: auto;
+
+    overflow: visible;
 }
 
 .gallery-container > div {
@@ -211,14 +237,28 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    overflow: visible;
 }
 
-.gallery-container > div > img {
-    border: 1px solid white;
+.galleryIMG {
+    border: 1px solid;
+    border-color: var(--text-color);
     width: 125%;
     min-width: 200px;
     height: auto;
     margin-top: 20px;
+    transform: scale(1);
+    filter: brightness(1);
+    transition: transform .3s, filter 2s, border-color .75s;
+}
+
+.galleryIMG:hover {
+    transform: scale(1.01);
+    border: 1px solid;
+    border-color: var(--color-logo);
+    filter: brightness(1.5);
+    transition: transform .3s, filter 2s, border-color .75s;
+    cursor: pointer;
 }
 
 #main {
@@ -286,8 +326,15 @@ nav {
 }
 
 .main-info > div > p > a {
-    color: var(--text-color)
+    color: var(--text-color);
+    transition: color .2s;
 }
+
+.main-info > div > p > a:hover {
+    color: var(--color-logo);
+    transition: color .2s;
+}
+
 
 .main-image {
     background-color: rgba(0, 2, 128, 0.267);
@@ -336,6 +383,25 @@ nav {
 
 .popular-half > div {
     margin: 0 15px 25px 15px;
+}
+
+.reveal-popular:hover > div:nth-child(1) > img {
+    animation: rotateArrow .5s ease;
+}
+
+.reveal-popular> img {
+    filter: brightness(1);
+    transition: filter .5s;
+}
+
+.reveal-popular:hover > img {
+    filter: brightness(1.35);
+    transition: filter .5s;
+}
+
+@keyframes rotateArrow {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
 }
 
 .popular-justify {
@@ -415,6 +481,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
+}
+
+.more-artists:hover img {
+    animation: rotateArrow .5s ease;
 }
 
 #footer {
