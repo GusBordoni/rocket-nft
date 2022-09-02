@@ -20,6 +20,7 @@
 
 -  Exercício de landing page após terminar o curso "Discover" da Rocketseat.
 -  Design responsivo, hidden navbar, animações e transições
+-  Integração da biblioteca [ScrollReveal](https://scrollrevealjs.org/)
 
 </p>
 
